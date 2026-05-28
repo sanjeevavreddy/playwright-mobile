@@ -1,0 +1,48 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="46.6699">
+<testsuite name="mobile/walmart-search.spec.ts" timestamp="2026-05-27T14:54:34.962Z" hostname="" tests="2" failures="1" skipped="0" time="46.416" errors="0">
+<testcase name="Walmart mobile web › loads the mobile homepage" classname="mobile/walmart-search.spec.ts" time="12.494">
+<system-out>
+<![CDATA[> Connect Playwright to BrowserStack Android device
+> Stop any existing Chrome session
+> Launch Chrome on BrowserStack Android device
+]]>
+</system-out>
+</testcase>
+<testcase name="Walmart mobile web › searches for laptop from the mobile homepage" classname="mobile/walmart-search.spec.ts" time="33.922">
+<system-out>
+<![CDATA[> Connect Playwright to BrowserStack Android device
+> Stop any existing Chrome session
+> Launch Chrome on BrowserStack Android device
+
+[[ATTACHMENT|mobile-walmart-search-Walm-1ea6c-op-from-the-mobile-homepage/error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  mobile/walmart-search.spec.ts:13:7 › Walmart mobile web › searches for laptop from the mobile homepage 
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /walmart/i
+    Received string:  ""
+    Timeout: 15000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 15000ms
+        18 × unexpected value ""
+
+
+      20 |     await results.expectForSearchTerm('laptop');
+      21 |
+    > 22 |     await expect(page).toHaveTitle(/walmart/i);
+         |                        ^
+      23 |     await page.screenshot({
+      24 |       path: 'test-results/artifacts/walmart-mobile-search-laptop.png',
+      25 |       fullPage: true
+        at /Users/sanjeeva/Documents/playwright-mobile/tests/mobile/walmart-search.spec.ts:22:24
+
+    Error Context: ../test-results/mobile-walmart-search-Walm-1ea6c-op-from-the-mobile-homepage/error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>

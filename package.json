@@ -1,0 +1,18 @@
+{
+  "name": "walmart-mobile-browser-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:mobile": "playwright test tests/mobile --workers=1",
+    "test:walmart:browserstack": "npm run test:mobile",
+    "test:walmart:android": "npm run test:mobile",
+    "test:headed": "playwright test tests/mobile --workers=1 --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "playwright": "^1.53.0"
+  }
+}
