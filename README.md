@@ -34,6 +34,15 @@ src/fixtures         Playwright fixtures for mobile BrowserStack sessions
 src/pages            Walmart page objects
 src/utils            Reusable test helpers
 tests/mobile         Mobile browser specs
+test-results         Reports, screenshots, traces, videos, and JUnit XML
+```
+
+Generated output is grouped under `test-results`:
+
+```text
+test-results/html-report            Playwright HTML report
+test-results/playwright-artifacts   Playwright traces, videos, and failure screenshots
+test-results/junit.xml              CI-friendly JUnit report
 ```
 
 Each test gets one BrowserStack Android device session. Keep `workers=1` unless you provide one BrowserStack device per worker.

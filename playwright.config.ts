@@ -2,6 +2,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+  outputDir: 'test-results/playwright-artifacts',
   timeout: 180_000,
   expect: {
     timeout: 15_000
@@ -12,12 +13,11 @@ export default defineConfig({
   workers: 1,
   reporter: [
     ['list'],
-    ['html', { open: 'never', outputFolder: 'playwright-report' }],
-    ['junit', { outputFile: 'test-results/junit.xml' }]
+    ['html', { open: 'never', outputFolder: 'test-results/html-report' }]
   ],
   use: {
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
+    trace: 'retain-on-failure',
+    screenshot: 'on',
     video: 'retain-on-failure',
     actionTimeout: 30_000,
     navigationTimeout: 90_000

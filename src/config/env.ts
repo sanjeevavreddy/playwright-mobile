@@ -26,7 +26,6 @@ function loadEnvFile(fileName: string): void {
 }
 
 loadEnvFile('.env');
-loadEnvFile('.env.local');
 
 function requiredEnv(name: string): string {
   const value = process.env[name];

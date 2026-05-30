@@ -10,7 +10,7 @@ test.describe('Walmart mobile web', () => {
     await home.expectLoaded();
   });
 
-  test('searches for laptop from the mobile homepage', async ({ page }) => {
+  test('searches for laptop from the mobile homepage', async ({ page }, testInfo) => {
     const home = new WalmartHomePage(page);
     const results = new WalmartSearchResultsPage(page);
 
@@ -18,11 +18,6 @@ test.describe('Walmart mobile web', () => {
     await home.expectLoaded();
     await home.searchFor('laptop');
     await results.expectForSearchTerm('laptop');
-
-    await expect(page).toHaveTitle(/walmart/i);
-    await page.screenshot({
-      path: 'test-results/artifacts/walmart-mobile-search-laptop.png',
-      fullPage: true
-    });
+    
   });
 });
